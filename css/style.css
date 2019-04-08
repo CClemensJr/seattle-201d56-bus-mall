@@ -1,0 +1,219 @@
+/*
+    Shout out to HTML5 UP | html5up.net | @ajlkn for broadening my navbar horizons
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Germania+One|Mrs+Sheppards|Open+Sans+Condensed:300');
+
+/* Nav Styling */
+    #header {
+        background: rgba(0, 0, 0, 0.589);
+        box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+        height: 3em;
+        left: 0;
+        line-height: 3em;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10000;
+    }
+
+    #header h1 {
+        cursor: default;
+        height: 3em;
+        left: 3em;
+        line-height: 3em;
+        position: absolute;
+        top: 0;
+    }
+
+    #header h1 a {
+        color: #F1E8B8;
+        font-family: 'Mrs Sheppards', cursive;
+        font-size: 2em;
+        text-decoration: none;
+    }
+
+    #header h1 a span:last-of-type {
+        color: #D05353;
+    }
+
+    #header nav {
+        height: 3em;
+        line-height: 3em;
+        position: absolute;
+        right: 3em;
+        top: 0;
+    }
+
+    #header nav ul {
+        margin: 0;
+    }
+
+    #header nav ul li {
+        display: inline-block;
+        font-size: 0.9em;
+        margin-left: 0.5em;
+        text-transform: lowercase;
+    }
+
+    #header nav ul li a {
+        color: #F1E8B8;
+        display: block;
+        font-family: 'Open Sans Condensed', sans-serif;
+        height: 3em;
+        line-height: 3em;
+        padding: 0 0.5em 0 0.5em;
+        outline: 0;
+        text-decoration: none;
+    }
+
+    #header nav ul li:hover {
+        background-color: black;
+        border-bottom: 2px solid #D05353;
+    }
+
+/* Main Content Styling */
+    #home, #overview, #skills, #portfolio, #about, #contact {
+        background-color: #191919;
+        border-bottom: 1em solid black;
+        font-family: 'Open Sans Condensed', sans-serif;
+        height: 50em;
+        width: 100%;
+    }
+
+    #overview h1, #skills h1, #portfolio h1, #about h1, #contact h1 {
+        color: #F9E784; 
+        font-family: 'Germania One', cursive;
+        font-size: 30px;
+        font-size: 3vw;
+        padding-top: 3em;
+        text-align: center;
+        text-transform: lowercase;
+        width: 100%;
+    }
+
+    /* Home Section */
+        #home {
+            color: #F9E784; 
+        }
+
+        #home h1 {
+            font-size: 60px;
+            font-size: 6vw;
+            left: 2em;
+            position: absolute;
+            text-transform: lowercase;
+            top: 2em;
+            -webkit-text-stroke-color: black;
+            -webkit-text-stroke-width: 0.01em;
+        }
+
+        #home h2 {
+            font-size: 30px;
+            font-size: 3vw;
+            left: 8em;
+            position: absolute;
+            text-transform: lowercase;
+            top: 10em;
+            -webkit-text-stroke-color: black;
+            -webkit-text-stroke-width: 0.02em;
+        }
+
+        #home .firstLetter {
+            color: #E58F65;
+        }
+
+        #home .myName {
+            color: #D05353;
+            font-family: 'Mrs Sheppards', cursive;
+            text-transform: uppercase;
+        }
+
+        #home .importantWord {
+            color: #D05353;
+            font-family: 'Germania One', cursive;
+        }
+
+        #home a {
+            background-color: #D05353;
+            border: .1em solid #E58F65;
+            border-radius: 2px;
+            color: #F9E784;
+            font-size: 2vw;
+            left: 20em;
+            padding: .25em;
+            position: absolute;
+            text-decoration: none;
+            text-transform: lowercase;
+            top: 22em;
+        }
+
+        #home a:hover {
+            background-color: #191919;
+            border-color: #D05353;
+            color: #E58F65;
+        }
+
+
+    /* Overview Section */
+        #overview article {
+            background-color: #E58F65;
+            height: 35em;
+            margin-left: 25%;
+            margin-right: 25%;
+            width: 50%;
+        }
+
+
+
+        
+    /* Skills Section */
+        #skills article {
+            background-color: #E58F65;
+            height: 35em;
+            margin-left: 25%;
+            margin-right: 25%;
+            width: 50%;
+        }
+
+
+    /* Portfolio Section */
+        #portfolio article {
+            background-color: #E58F65;
+            height: 35em;
+            margin-left: 25%;
+            margin-right: 25%;
+            width: 50%;
+        }
+
+
+
+    /* About Section */
+        #about article {
+            background-color: #E58F65;
+            height: 35em;
+            margin-left: 25%;
+            margin-right: 25%;
+            width: 50%;
+        }
+
+    /* Contact Section */
+        #contact article {
+            background-color: #E58F65;
+            height: 35em;
+            margin-left: 25%;
+            margin-right: 25%;
+            width: 50%;
+        }
+
+    /* Footer */
+    footer {
+        background: #F1E8B8;
+        height: 3em;
+        line-height: 3em;
+        text-align: center;
+    }
+
+    footer ul li {
+        display: inline-block;
+    }
