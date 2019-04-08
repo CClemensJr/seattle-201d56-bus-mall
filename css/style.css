@@ -1,8 +1,14 @@
-/*
-    Shout out to HTML5 UP | html5up.net | @ajlkn for broadening my navbar horizons
-*/
-
 @import url('https://fonts.googleapis.com/css?family=Germania+One|Mrs+Sheppards|Open+Sans+Condensed:300');
+
+/* General */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: 80%;
+}
 
 /* Nav Styling */
     #header {
@@ -62,7 +68,7 @@
         font-family: 'Open Sans Condensed', sans-serif;
         height: 3em;
         line-height: 3em;
-        padding: 0 0.5em 0 0.5em;
+        /* padding: 0 0.5em 0 0.5em; */
         outline: 0;
         text-decoration: none;
     }
@@ -92,6 +98,7 @@
         width: 100%;
     }
 
+    
     /* Home Section */
         #home {
             color: #F9E784; 
