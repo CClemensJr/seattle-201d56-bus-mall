@@ -22,43 +22,35 @@ body {
         width: 100%;
         z-index: 10000;
     }
-
-    #header h1 {
-        cursor: default;
+    
+    #header nav {
         height: 3em;
-        left: 3em;
         line-height: 3em;
-        position: absolute;
-        top: 0;
+        margin: 0 auto;
+        width: 80%;
     }
 
-    #header h1 a {
+    #header nav h1 {
+        cursor: default;
+        float: left;
+        height: 3em;
+        line-height: 3em;
+    }
+
+    #header nav h1 a {
         color: #F1E8B8;
         font-family: 'Mrs Sheppards', cursive;
         font-size: 2em;
         text-decoration: none;
     }
 
-    #header h1 a span:last-of-type {
-        color: #D05353;
-    }
-
-    #header nav {
-        height: 3em;
-        line-height: 3em;
-        position: absolute;
-        right: 3em;
-        top: 0;
-    }
-
     #header nav ul {
-        margin: 0;
+        float: right;
     }
 
     #header nav ul li {
         display: inline-block;
         font-size: 0.9em;
-        margin-left: 0.5em;
         text-transform: lowercase;
     }
 
@@ -68,7 +60,6 @@ body {
         font-family: 'Open Sans Condensed', sans-serif;
         height: 3em;
         line-height: 3em;
-        /* padding: 0 0.5em 0 0.5em; */
         outline: 0;
         text-decoration: none;
     }
@@ -98,7 +89,7 @@ body {
         width: 100%;
     }
 
-    
+
     /* Home Section */
         #home {
             color: #F9E784; 
