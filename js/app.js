@@ -17,6 +17,30 @@ function Product (name) {
   allProducts.push(this);
 }
 
+/* Create Product objects */
+function instantiateProducts() {
+  for (let i = 0; i < productNames.length; i++)
+  {
+    new Product(productNames[i]);
+  }
+}
+
+/* Show Random Product images */
+function showRandomProducts() {
+  let randomIndex = Math.floor(Math.random() * allProducts.length);
+
+  while (firstProduct.alt === allProducts[randomIndex].name) {
+    let randomIndex = Math.floor(Math.random() * allProducts.length);
+
+    console.log("Duplicate found");
+  }
+
+  allProducts[randomIndex].views++;
+  firstProduct.src = allProducts[randomIndex].filepath;
+  firstProduct.alt = allProducts[randomIndex].name;
+  firstProduct.title = allProducts[randomIndex].name;
+}
+
 
 // Select three random images from image directory
 // Display them in browser
