@@ -9,7 +9,7 @@ let firstProductTitle = document.getElementById("firstProductTitle");
 
 /* Product constructor */
 function Product (name) {
-  this.filepath = (name === "usb") ? `img/${ name }.gif` : `img/${ name }.jpg`;
+  this.filepath = (name === "usb" || name === "sweep") ? `img/${ name }.png` : `img/${ name }.jpg`;
   this.name = name;
   this.views = 0;
   this.clicks = 0;
@@ -43,12 +43,22 @@ function showRandomProducts() {
   firstProductTitle.innerText = allProducts[randomIndex].name;
 }
 
+/* This function calls all of the others */
 function main() {
   instantiateProducts();
   showRandomProducts();
 }
 
+/* This function handles the clicking of an image */
+function handleProductClick(event) {
+  console.log(event.target);
+
+  showRandomProducts();
+}
+
 main();
+
+productImages.addEventListener('click', handleProductClick);
 // Select three random images from image directory
 // Display them in browser
 // Track the number of clicks on an image
