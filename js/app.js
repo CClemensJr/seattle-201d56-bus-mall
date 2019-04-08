@@ -5,6 +5,7 @@ const productNames = ["bag", "banana", "bathroom", "boots", "breakfast", "bubble
 let allProducts = [];
 let productImages = document.getElementById("productImages");
 let firstProduct = document.getElementById("firstProduct");
+let firstProductTitle = document.getElementById("firstProductTitle");
 
 /* Product constructor */
 function Product (name) {
@@ -36,12 +37,18 @@ function showRandomProducts() {
   }
 
   allProducts[randomIndex].views++;
+
   firstProduct.src = allProducts[randomIndex].filepath;
   firstProduct.alt = allProducts[randomIndex].name;
-  firstProduct.title = allProducts[randomIndex].name;
+  firstProductTitle.innerText = allProducts[randomIndex].name;
 }
 
+function main() {
+  instantiateProducts();
+  showRandomProducts();
+}
 
+main();
 // Select three random images from image directory
 // Display them in browser
 // Track the number of clicks on an image
