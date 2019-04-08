@@ -157,12 +157,39 @@ body {
         #products article {
             background-color: #E58F65;
             height: 35em;
-            margin-left: 25%;
-            margin-right: 25%;
-            width: 50%;
+            margin: 1em auto;
+            padding: 3em;
+            width: 90%;
         }
 
+        #products article figure {
+            display: inline-block;
+            margin: 0 auto;
+            width: 30%;
+        }
 
+        #products article figure:first-of-type {
+            float: left;
+        }
+
+        #products article figure:nth-of-type(2) {
+            margin-left: 5%;
+        }
+
+        #products article figure:last-of-type {
+            float: right;
+        }
+
+        #products article figure img {
+            width: 100%;
+        }
+
+        #products article figure figcaption {
+            background: lightblue;
+            height: 2em;
+            line-height: 2em;
+            text-align: center;
+        }
 
         
     /* results Section */
