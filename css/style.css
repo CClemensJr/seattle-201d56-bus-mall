@@ -70,7 +70,7 @@ body {
     }
 
 /* Main Content Styling */
-    #home, #overview, #skills, #portfolio, #about, #contact {
+    #home, #products, #results {
         background-color: #191919;
         border-bottom: 1em solid black;
         font-family: 'Open Sans Condensed', sans-serif;
@@ -78,7 +78,7 @@ body {
         width: 100%;
     }
 
-    #overview h1, #skills h1, #portfolio h1, #about h1, #contact h1 {
+    #products h1, #results h1 {
         color: #F9E784; 
         font-family: 'Germania One', cursive;
         font-size: 30px;
@@ -153,8 +153,8 @@ body {
         }
 
 
-    /* Overview Section */
-        #overview article {
+    /* products Section */
+        #products article {
             background-color: #E58F65;
             height: 35em;
             margin-left: 25%;
@@ -165,38 +165,8 @@ body {
 
 
         
-    /* Skills Section */
-        #skills article {
-            background-color: #E58F65;
-            height: 35em;
-            margin-left: 25%;
-            margin-right: 25%;
-            width: 50%;
-        }
-
-
-    /* Portfolio Section */
-        #portfolio article {
-            background-color: #E58F65;
-            height: 35em;
-            margin-left: 25%;
-            margin-right: 25%;
-            width: 50%;
-        }
-
-
-
-    /* About Section */
-        #about article {
-            background-color: #E58F65;
-            height: 35em;
-            margin-left: 25%;
-            margin-right: 25%;
-            width: 50%;
-        }
-
-    /* Contact Section */
-        #contact article {
+    /* results Section */
+        #results article {
             background-color: #E58F65;
             height: 35em;
             margin-left: 25%;
@@ -205,13 +175,13 @@ body {
         }
 
     /* Footer */
-    footer {
-        background: #F1E8B8;
-        height: 3em;
-        line-height: 3em;
-        text-align: center;
-    }
+        footer {
+            background: #F1E8B8;
+            height: 3em;
+            line-height: 3em;
+            text-align: center;
+        }
 
-    footer ul li {
-        display: inline-block;
-    }
+        footer ul li {
+            display: inline-block;
+        }
