@@ -31,7 +31,7 @@
 > You are also responsible for the look and feel of the app, so don't forget a custom font, color palette, layout with semantic HTML, and so on.
 
 ## notes
-
+> Images were resized by Edward Abrahamson
 
 ## versions:
 > Version 1.0  April 8, 2019
