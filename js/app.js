@@ -152,6 +152,39 @@
  * This function shows the results 
  * */
   function showResults() {
+    let timesClicked = [];
+    let ctx = document.getElementById("productChart").getContext("2d");
+
+    for (let i = 0; i < allProducts.length; i++) {
+      timesClicked.push(allProducts[i].clicks);
+    }
+
+    let productChart = new Chart(ctx, {
+      type: "bar",
+
+      data: {
+        labels: productNames,
+
+        datasets: [{
+          label: "# of Clicks",
+          data: timesClicked,
+          backgroundColor: "Black",
+          borderColor: "Blue",
+          borderWidth: 1
+        }]
+       },
+
+      options: {
+        scales: {
+          xAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+
     for (let i = 0; i < allProducts.length; i++) {
       let li = document.createElement("li");
       let resultText = document.createTextNode(`${ allProducts[i].name }: ${ allProducts[i].clicks } clicks`);
