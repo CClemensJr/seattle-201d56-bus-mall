@@ -3,9 +3,18 @@
  /* Global Variables */
 const productNames = ["bag", "banana", "bathroom", "boots", "breakfast", "bubblegum", "chair", "cthulhu", "dog-duck",                        "dragon", "pen", "pet-sweep", "scissors", "shark", "sweep", "tauntaun", "unicorn", "usb",                              "water-can", "wine-glass"];
 let allProducts = [];
+
+/* DOM variables */
 let productImages = document.getElementById("productImages");
+
 let firstProduct = document.getElementById("firstProduct");
 let firstProductTitle = document.getElementById("firstProductTitle");
+
+let secondProduct = document.getElementById("secondProduct");
+let secondProductTitle = document.getElementById("secondProductTitle");
+
+let thirdProduct = document.getElementById("thirdProduct");
+let thirdProductTitle = document.getElementById("thirdProductTitle");
 
 /* Product constructor */
 function Product (name) {
