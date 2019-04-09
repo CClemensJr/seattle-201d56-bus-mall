@@ -1,7 +1,9 @@
 'use strict';
+// Refactor ideas
+  // array of 6 elements
 
  /* Global Variables */
-  const maxClicks = 5;
+  const maxClicks = 25;
   let totalClicks = 0;
   const productNames = ["bag", "banana", "bathroom", "boots", "breakfast", "bubblegum", "chair", "cthulhu", "dog-duck",                        "dragon", "pen", "pet-sweep", "scissors", "shark", "sweep", "tauntaun", "unicorn", "usb",                              "water-can", "wine-glass"];
   let allProducts = [];
@@ -17,6 +19,8 @@
 
   let thirdProduct = document.getElementById("thirdProduct");
   let thirdProductTitle = document.getElementById("thirdProductTitle");
+
+  let ul = document.getElementById("resultsList");
 
 
 /* Product constructor */
@@ -83,6 +87,20 @@
   }
 
 
+/* This function shows the results */
+  function showResults() {
+    for (let i = 0; i < allProducts.length; i++) {
+      let li = document.createElement("li");
+      let product = document.createTextNode(`${ allProducts[i].name }: ${ allProducts[i].clicks } clicks`);
+
+      li.appendChild(product);
+      ul.appendChild(li);
+    }
+
+    // document.body.appendChild();
+  }
+
+
 /* This function handles the clicking of an image */
   function handleProductClick(event) {
     console.log(event.target.alt);
@@ -95,7 +113,16 @@
 
     totalClicks++;
     
-    (totalClicks === maxClicks) ? productImages.removeEventListener('click', handleProductClick) : showRandomProducts();
+    if (totalClicks === maxClicks)
+    {
+      productImages.removeEventListener('click', handleProductClick);
+      
+      showResults();
+    }
+    else
+    {
+      showRandomProducts();
+    }
   }
 
 main();
