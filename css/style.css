@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Germania+One|Mrs+Sheppards|Open+Sans+Condensed:300');
 
+
+/* deep purple: #310A31
+rythm: #847996
+pewter blue: #88B7B5
+cambridge blue: #A7CAB1
+eggshell: #F4ECD6 */
+
 /* General */
 * {
+    background: #F4ECD6;
     box-sizing: border-box;
+    color: #310A31;
 }
 
 body {
@@ -27,7 +36,7 @@ body {
         height: 3em;
         line-height: 3em;
         margin: 0 auto;
-        width: 80%;
+        width: 50%;
     }
 
     #header nav h1 {
@@ -50,7 +59,8 @@ body {
 
     #header nav ul li {
         display: inline-block;
-        font-size: 0.9em;
+        /* font-size: 1.25em; */
+        margin-left: 3em;
         text-transform: lowercase;
     }
 

@@ -56,15 +56,15 @@
  * */
   function showRandomProducts() {
     let currentProductIndexes = [];
-    let previousProductIndexes = [];
+    // let previousProductIndexes = [0, 0, 0];
 
     for (let i = 0; i < 3; i++) {
       let randomNumber = Math.floor(Math.random() * allProducts.length);
 
-      if (!currentProductIndexes.includes(randomNumber)) {
+      if (!currentProductIndexes.includes(randomNumber) /* && !previousProductIndexes.includes(randomNumber) */) {
         currentProductIndexes.push(randomNumber);
       } else {
-        while(currentProductIndexes.includes(randomNumber)) {
+        while(currentProductIndexes.includes(randomNumber) /* && previousProductIndexes.includes(randomNumber) */) {
           randomNumber = Math.floor(Math.random() * allProducts.length);
         }
 
@@ -72,9 +72,9 @@
       }
     }
 
-    for (let i = 0; i < currentProductIndexes.length; i++) {
-      console.log(currentProductIndexes[i]);
+    console.log(`CURRENT: ${ currentProductIndexes[0] }, ${ currentProductIndexes[1] }, ${ currentProductIndexes[2] }`);
 
+    for (let i = 0; i < currentProductIndexes.length; i++) {
       allProducts[currentProductIndexes[i]].views++;
 
       if (i === 0) {
@@ -96,6 +96,11 @@
       }
     }
 
+    // previousProductIndexes = currentProductIndexes;
+    
+    // console.log(`PREVIOUS: ${ previousProductIndexes[0] }, ${ previousProductIndexes[1] }, ${ previousProductIndexes[2] }`);
+
+    
 
     // let firstRandomIndex = Math.floor(Math.random() * allProducts.length);
     // let secondRandomIndex = Math.floor(Math.random() * allProducts.length);
