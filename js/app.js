@@ -45,23 +45,14 @@
     let secondRandomIndex = Math.floor(Math.random() * allProducts.length);
     let thirdRandomIndex = Math.floor(Math.random() * allProducts.length);
 
-    while (firstProduct.alt === allProducts[firstRandomIndex].name ) {
-      let firstRandomIndex = Math.floor(Math.random() * allProducts.length);
+    // while (firstProduct.alt === allProducts[firstRandomIndex].name || 
+    //        secondProduct.alt === allProducts[secondRandomIndex].name ||
+    //        thirdProduct.alt === allProducts[thirdRandomIndex].name) {
 
-      console.log("Duplicate found");
-    }
+    //   let firstRandomIndex = Math.floor(Math.random() * allProducts.length);
 
-    while (secondProduct.alt === allProducts[secondRandomIndex].name ) {
-      let secondRandomIndex = Math.floor(Math.random() * allProducts.length);
-
-      console.log("Duplicate found");
-    }
-
-    while (thirdProduct.alt === allProducts[thirdRandomIndex].name ) {
-      let thirdRandomIndex = Math.floor(Math.random() * allProducts.length);
-
-      console.log("Duplicate found");
-    }
+    //   console.log("Duplicate found");
+    // }
 
     allProducts[firstRandomIndex].views++;
     allProducts[secondRandomIndex].views++;
@@ -80,6 +71,7 @@
     thirdProductTitle.innerText = allProducts[thirdRandomIndex].name;
   }
 
+  
 /* Return a random number */
   let randomizer = () => Math.floor(Math.random() * allProducts.length);
 
@@ -89,6 +81,7 @@
     instantiateProducts();
     showRandomProducts();
   }
+
 
 /* This function handles the clicking of an image */
   function handleProductClick(event) {
