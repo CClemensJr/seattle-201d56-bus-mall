@@ -1,69 +1,109 @@
 'use strict';
 
  /* Global Variables */
-const productNames = ["bag", "banana", "bathroom", "boots", "breakfast", "bubblegum", "chair", "cthulhu", "dog-duck",                        "dragon", "pen", "pet-sweep", "scissors", "shark", "sweep", "tauntaun", "unicorn", "usb",                              "water-can", "wine-glass"];
-let allProducts = [];
+  const maxClicks = 5;
+  let totalClicks = 0;
+  const productNames = ["bag", "banana", "bathroom", "boots", "breakfast", "bubblegum", "chair", "cthulhu", "dog-duck",                        "dragon", "pen", "pet-sweep", "scissors", "shark", "sweep", "tauntaun", "unicorn", "usb",                              "water-can", "wine-glass"];
+  let allProducts = [];
 
 /* DOM variables */
-let productImages = document.getElementById("productImages");
+  let productImages = document.getElementById("productImages");
 
-let firstProduct = document.getElementById("firstProduct");
-let firstProductTitle = document.getElementById("firstProductTitle");
+  let firstProduct = document.getElementById("firstProduct");
+  let firstProductTitle = document.getElementById("firstProductTitle");
 
-let secondProduct = document.getElementById("secondProduct");
-let secondProductTitle = document.getElementById("secondProductTitle");
+  let secondProduct = document.getElementById("secondProduct");
+  let secondProductTitle = document.getElementById("secondProductTitle");
 
-let thirdProduct = document.getElementById("thirdProduct");
-let thirdProductTitle = document.getElementById("thirdProductTitle");
+  let thirdProduct = document.getElementById("thirdProduct");
+  let thirdProductTitle = document.getElementById("thirdProductTitle");
+
 
 /* Product constructor */
-function Product (name) {
-  this.filepath = (name === "usb" || name === "sweep") ? `img/${ name }.png` : `img/${ name }.jpg`;
-  this.name = name;
-  this.views = 0;
-  this.clicks = 0;
-  this.currentImage = false;
+  function Product (name) {
+    this.filepath = (name === "usb" || name === "sweep") ? `img/${ name }.png` : `img/${ name }.jpg`;
+    this.name = name;
+    this.views = 0;
+    this.clicks = 0;
+    this.currentImage = false;
 
-  allProducts.push(this);
-}
+    allProducts.push(this);
+  }
 
 /* Create Product objects */
-function instantiateProducts() {
-  for (let i = 0; i < productNames.length; i++)
-  {
-    new Product(productNames[i]);
+  function instantiateProducts() {
+    for (let i = 0; i < productNames.length; i++)
+    {
+      new Product(productNames[i]);
+    }
   }
-}
+
 
 /* Show Random Product images */
-function showRandomProducts() {
-  let randomIndex = Math.floor(Math.random() * allProducts.length);
+  function showRandomProducts() {
+    let firstRandomIndex = Math.floor(Math.random() * allProducts.length);
+    let secondRandomIndex = Math.floor(Math.random() * allProducts.length);
+    let thirdRandomIndex = Math.floor(Math.random() * allProducts.length);
 
-  while (firstProduct.alt === allProducts[randomIndex].name) {
-    let randomIndex = Math.floor(Math.random() * allProducts.length);
+    while (firstProduct.alt === allProducts[firstRandomIndex].name ) {
+      let firstRandomIndex = Math.floor(Math.random() * allProducts.length);
 
-    console.log("Duplicate found");
+      console.log("Duplicate found");
+    }
+
+    while (secondProduct.alt === allProducts[secondRandomIndex].name ) {
+      let secondRandomIndex = Math.floor(Math.random() * allProducts.length);
+
+      console.log("Duplicate found");
+    }
+
+    while (thirdProduct.alt === allProducts[thirdRandomIndex].name ) {
+      let thirdRandomIndex = Math.floor(Math.random() * allProducts.length);
+
+      console.log("Duplicate found");
+    }
+
+    allProducts[firstRandomIndex].views++;
+    allProducts[secondRandomIndex].views++;
+    allProducts[thirdRandomIndex].views++;
+
+    firstProduct.src = allProducts[firstRandomIndex].filepath;
+    firstProduct.alt = allProducts[firstRandomIndex].name;
+    firstProductTitle.innerText = allProducts[firstRandomIndex].name;
+
+    secondProduct.src = allProducts[secondRandomIndex].filepath;
+    secondProduct.alt = allProducts[secondRandomIndex].name;
+    secondProductTitle.innerText = allProducts[secondRandomIndex].name;
+
+    thirdProduct.src = allProducts[thirdRandomIndex].filepath;
+    thirdProduct.alt = allProducts[thirdRandomIndex].name;
+    thirdProductTitle.innerText = allProducts[thirdRandomIndex].name;
   }
 
-  allProducts[randomIndex].views++;
+/* Return a random number */
+  let randomizer = () => Math.floor(Math.random() * allProducts.length);
 
-  firstProduct.src = allProducts[randomIndex].filepath;
-  firstProduct.alt = allProducts[randomIndex].name;
-  firstProductTitle.innerText = allProducts[randomIndex].name;
-}
 
 /* This function calls all of the others */
-function main() {
-  instantiateProducts();
-  showRandomProducts();
-}
+  function main() {
+    instantiateProducts();
+    showRandomProducts();
+  }
 
 /* This function handles the clicking of an image */
-function handleProductClick(event) {
-  console.log(event.target);
+  function handleProductClick(event) {
+    console.log(event.target.alt);
+    for (let i = 0; i < allProducts.length; i++) {
+      if (event.target.alt === allProducts[i].name)
+      {
+        allProducts[i].clicks++;
+      }
+    }
 
-  showRandomProducts();
-}
+    totalClicks++;
+    
+    (totalClicks === maxClicks) ? productImages.removeEventListener('click', handleProductClick) : showRandomProducts();
+  }
 
 main();
 
