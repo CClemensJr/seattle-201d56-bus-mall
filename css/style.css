@@ -50,7 +50,7 @@ body {
 
     #header nav h1 a {
         background: #88B7B5;
-        color: #F1E8B8;
+        color: #F4ECD6;
         font-family: 'Mrs Sheppards', cursive;
         font-size: 2em;
         text-decoration: none;
@@ -87,7 +87,7 @@ body {
 
 /* Main Content Styling */
     #home, #products, #results {
-        background-color: #191919;
+        /* background-color: #191919; */
         border-bottom: 1em solid black;
         font-family: 'Open Sans Condensed', sans-serif;
         height: 50em;
@@ -95,7 +95,6 @@ body {
     }
 
     #products h1, #results h1 {
-        color: #F9E784; 
         font-family: 'Germania One', cursive;
         font-size: 30px;
         font-size: 3vw;
@@ -108,7 +107,6 @@ body {
 
     /* Home Section */
         #home {
-            color: #F9E784; 
         }
 
         #home h1 {
@@ -133,26 +131,11 @@ body {
             -webkit-text-stroke-width: 0.02em;
         }
 
-        #home .firstLetter {
-            color: #E58F65;
-        }
-
-        #home .myName {
-            color: #D05353;
-            font-family: 'Mrs Sheppards', cursive;
-            text-transform: uppercase;
-        }
-
-        #home .importantWord {
-            color: #D05353;
-            font-family: 'Germania One', cursive;
-        }
 
         #home a {
             background-color: #D05353;
             border: .1em solid #E58F65;
             border-radius: 2px;
-            color: #F9E784;
             font-size: 2vw;
             left: 20em;
             padding: .25em;
@@ -165,7 +148,7 @@ body {
         #home a:hover {
             background-color: #191919;
             border-color: #D05353;
-            color: #E58F65;
+            /* color: #E58F65; */
         }
 
 
