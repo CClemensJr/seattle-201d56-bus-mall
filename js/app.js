@@ -111,15 +111,6 @@
   let randomizer = () => Math.floor(Math.random() * allProducts.length);
 
 
-/******************** 
- * This function calls all of the others 
- * */
-  function main() {
-    createProducts();
-    showRandomProducts();
-  }
-
-
 /********************* 
  * This function shows the results 
  * */
@@ -160,6 +151,15 @@
   }
 
 
+/******************** 
+ * This function calls all of the others 
+ * */
+function main() {
+  createProducts();
+  showRandomProducts();
+}
+
+
 /***********************
  * This function handles the clicking of an image 
  * */
@@ -177,7 +177,7 @@
     if (totalClicks === maxClicks)
     {
       productImages.removeEventListener('click', handleProductClick);
-      
+      localStorage.setItem('products', JSON.stringify(allProducts));
       showResults();
     }
     else
