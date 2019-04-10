@@ -19,6 +19,7 @@ body {
     width: 80%;
 }
 
+
 /* Nav Styling */
     #header {
         background: #88B7B5;
@@ -56,6 +57,12 @@ body {
         text-decoration: none;
     }
 
+    #header nav h1 a:hover {
+        color: #310A31;
+        -webkit-text-stroke-color: #F4ECD6;
+        -webkit-text-stroke-width: 0.05em;
+    }
+
     #header nav ul {
         background: #88B7B5;
         float: right;
@@ -84,6 +91,7 @@ body {
         background-color: black;
         border-bottom: 2px solid #D05353;
     }
+
 
 /* Main Content Styling */
     #home, #products, #results {
