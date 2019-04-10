@@ -48,7 +48,6 @@
     let products = JSON.parse(localProducts);
 
     (products && products.length) ? allProducts = products : instantiateProducts();
-
   }
 
   function instantiateProducts() {
@@ -109,6 +108,7 @@
  * Return a random number 
  * */
   let randomizer = () => Math.floor(Math.random() * allProducts.length);
+
 
 
 /********************* 
@@ -174,7 +174,7 @@ function main() {
 
     totalClicks++;
     
-    if (totalClicks === maxClicks)
+    if (totalClicks > maxClicks)
     {
       productImages.removeEventListener('click', handleProductClick);
       localStorage.setItem('products', JSON.stringify(allProducts));
