@@ -107,6 +107,9 @@ body {
 
     /* Home Section */
         #home {
+            background-image: url("./../img/busseat.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
         }
 
         #home h1 {
