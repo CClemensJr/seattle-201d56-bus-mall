@@ -43,6 +43,14 @@
 /******************** 
  * Create Product objects 
  * */
+  function createProducts() {
+    let localProducts = localStorage.getItem("products");
+    let products = JSON.parse(localProducts);
+
+    (products && products.length) ? allProducts = products : instantiateProducts();
+
+  }
+
   function instantiateProducts() {
     for (let i = 0; i < productNames.length; i++)
     {
@@ -56,15 +64,14 @@
  * */
   function showRandomProducts() {
     let currentProductIndexes = [];
-    // let previousProductIndexes = [0, 0, 0];
 
     for (let i = 0; i < 3; i++) {
       let randomNumber = Math.floor(Math.random() * allProducts.length);
 
-      if (!currentProductIndexes.includes(randomNumber) /* && !previousProductIndexes.includes(randomNumber) */) {
+      if (!currentProductIndexes.includes(randomNumber)) {
         currentProductIndexes.push(randomNumber);
       } else {
-        while(currentProductIndexes.includes(randomNumber) /* && previousProductIndexes.includes(randomNumber) */) {
+        while(currentProductIndexes.includes(randomNumber)) {
           randomNumber = Math.floor(Math.random() * allProducts.length);
         }
 
@@ -108,7 +115,7 @@
  * This function calls all of the others 
  * */
   function main() {
-    instantiateProducts();
+    createProducts();
     showRandomProducts();
   }
 
