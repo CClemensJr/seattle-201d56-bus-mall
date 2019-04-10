@@ -116,6 +116,7 @@
  * */
   function showResults() {
     pChart.hidden = false;
+
     let timesClicked = [];
     let ctx = document.getElementById("productChart").getContext("2d");
 
@@ -178,6 +179,7 @@ function main() {
     {
       productImages.removeEventListener('click', handleProductClick);
       localStorage.setItem('products', JSON.stringify(allProducts));
+      document.location.href="#results";
       showResults();
     }
     else
