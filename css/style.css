@@ -66,6 +66,8 @@ body {
     #header nav ul {
         background: #88B7B5;
         float: right;
+        height: 3em;
+        line-height: 3em;
     }
 
     #header nav ul li {
@@ -73,7 +75,6 @@ body {
         display: inline-block;
         /* font-size: 1.25em; */
         margin-left: 3em;
-        text-transform: lowercase;
     }
 
     #header nav ul li a {
