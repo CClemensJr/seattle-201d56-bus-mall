@@ -95,41 +95,6 @@
         thirdProductTitle.innerText = allProducts[currentProductIndexes[i]].name;
       }
     }
-
-    // previousProductIndexes = currentProductIndexes;
-    
-    // console.log(`PREVIOUS: ${ previousProductIndexes[0] }, ${ previousProductIndexes[1] }, ${ previousProductIndexes[2] }`);
-
-    
-
-    // let firstRandomIndex = Math.floor(Math.random() * allProducts.length);
-    // let secondRandomIndex = Math.floor(Math.random() * allProducts.length);
-    // let thirdRandomIndex = Math.floor(Math.random() * allProducts.length);
-
-    // while (firstProduct.alt === allProducts[firstRandomIndex].name || 
-    //        secondProduct.alt === allProducts[secondRandomIndex].name ||
-    //        thirdProduct.alt === allProducts[thirdRandomIndex].name) {
-
-    //   let firstRandomIndex = Math.floor(Math.random() * allProducts.length);
-
-    //   console.log("Duplicate found");
-    // }
-
-    // allProducts[firstRandomIndex].views++;
-    // allProducts[secondRandomIndex].views++;
-    // allProducts[thirdRandomIndex].views++;
-
-    // firstProduct.src = allProducts[firstRandomIndex].filepath;
-    // firstProduct.alt = allProducts[firstRandomIndex].name;
-    // firstProductTitle.innerText = allProducts[firstRandomIndex].name;
-
-    // secondProduct.src = allProducts[secondRandomIndex].filepath;
-    // secondProduct.alt = allProducts[secondRandomIndex].name;
-    // secondProductTitle.innerText = allProducts[secondRandomIndex].name;
-
-    // thirdProduct.src = allProducts[thirdRandomIndex].filepath;
-    // thirdProduct.alt = allProducts[thirdRandomIndex].name;
-    // thirdProductTitle.innerText = allProducts[thirdRandomIndex].name;
   }
 
   
@@ -168,8 +133,8 @@
         datasets: [{
           label: "# of Clicks",
           data: timesClicked,
-          backgroundColor: "Black",
-          borderColor: "Blue",
+          backgroundColor: "#a7cab1",
+          borderColor: "#310A31",
           borderWidth: 1
         }]
        },
