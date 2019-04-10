@@ -88,9 +88,14 @@ body {
         text-decoration: none;
     }
 
-    #header nav ul li:hover {
-        background-color: black;
-        border-bottom: 2px solid #D05353;
+    #header nav ul li a:hover {
+        background-color: #F1E8B8;
+        border-bottom: .75em solid #847996;
+        color: #A7CAB1;
+        font-family: 'Mrs Sheppards', cursive;
+        padding: .1em;
+        -webkit-text-stroke-color: #310A31;
+        -webkit-text-stroke-width: 0.05em;
     }
 
 
