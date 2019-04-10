@@ -149,14 +149,6 @@
         }
       }
     });
-
-    for (let i = 0; i < allProducts.length; i++) {
-      let li = document.createElement("li");
-      let resultText = document.createTextNode(`${ allProducts[i].name }: ${ allProducts[i].clicks } clicks`);
-
-      li.appendChild(resultText);
-      ul.appendChild(li);
-    }
   }
 
 
