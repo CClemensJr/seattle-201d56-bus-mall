@@ -87,7 +87,6 @@ body {
 
 /* Main Content Styling */
     #home, #products, #results {
-        /* background-color: #191919; */
         border-bottom: 1em solid black;
         font-family: 'Open Sans Condensed', sans-serif;
         height: 50em;
@@ -113,45 +112,44 @@ body {
         }
 
         #home h1 {
+            background: transparent;
+            display: inline;
             font-size: 60px;
             font-size: 6vw;
-            left: 2em;
+            left: 2.5em;
             position: absolute;
-            text-transform: lowercase;
             top: 2em;
-            -webkit-text-stroke-color: black;
+            -webkit-text-stroke-color: #F4ECD6;
             -webkit-text-stroke-width: 0.01em;
         }
 
         #home h2 {
+            background: transparent;
             font-size: 30px;
-            font-size: 3vw;
-            left: 8em;
+            font-size: 4vw;
+            left: 7em;
             position: absolute;
-            text-transform: lowercase;
             top: 10em;
-            -webkit-text-stroke-color: black;
+            -webkit-text-stroke-color: #F4ECD6;
             -webkit-text-stroke-width: 0.02em;
         }
 
-
         #home a {
-            background-color: #D05353;
-            border: .1em solid #E58F65;
+            background-color: #88B7B5;
+            border: .1em solid #847996;
             border-radius: 2px;
             font-size: 2vw;
-            left: 20em;
+            left: 23em;
             padding: .25em;
             position: absolute;
             text-decoration: none;
-            text-transform: lowercase;
-            top: 22em;
+            top: 24em;
         }
 
         #home a:hover {
-            background-color: #191919;
-            border-color: #D05353;
-            /* color: #E58F65; */
+            background-color: #310A31;
+            border-color: #F4ECD6;
+            color: #88B7B5;
         }
 
 
