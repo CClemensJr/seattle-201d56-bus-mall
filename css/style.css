@@ -89,7 +89,6 @@ body {
     }
 
     #header nav ul li a:hover {
-        background-color: #F1E8B8;
         border-bottom: .75em solid #847996;
         color: #A7CAB1;
         font-family: 'Mrs Sheppards', cursive;
@@ -113,7 +112,6 @@ body {
         font-size: 3vw;
         padding-top: 3em;
         text-align: center;
-        text-transform: lowercase;
         width: 100%;
     }
 
@@ -169,14 +167,16 @@ body {
 
     /* products Section */
         #products article {
-            background-color: #E58F65;
-            height: 35em;
+            background-color: #847996;
+            border: .5em solid #A7CAB1;
+            height: 23em;
             margin: 1em auto;
             padding: 3em;
             width: 90%;
         }
 
         #products article figure {
+            border: .5em solid #F4ECD6;
             display: inline-block;
             margin: 0 auto;
             width: 30%;
@@ -195,11 +195,13 @@ body {
         }
 
         #products article figure img {
+            border: .05em solid #310A31;
             width: 100%;
         }
 
         #products article figure figcaption {
-            background: lightblue;
+            background: #88B7B5;
+            border: .05em solid #310A31;
             height: 2em;
             line-height: 2em;
             text-align: center;
