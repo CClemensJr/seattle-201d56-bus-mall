@@ -89,7 +89,7 @@ body {
     }
 
     #header nav ul li a:hover {
-        border-bottom: .75em solid #847996;
+        border-bottom: .5em solid #847996;
         color: #A7CAB1;
         font-family: 'Mrs Sheppards', cursive;
         padding: .1em;
@@ -169,7 +169,7 @@ body {
         #products article {
             background-color: #847996;
             border: .5em solid #A7CAB1;
-            height: 23em;
+            height: 24em;
             margin: 1em auto;
             padding: 3em;
             width: 90%;
@@ -210,11 +210,18 @@ body {
         
     /* results Section */
         #results article {
-            background-color: #E58F65;
-            height: 35em;
-            margin-left: 25%;
-            margin-right: 25%;
-            width: 50%;
+            background-color: #847996;
+            border: .5em solid #A7CAB1;
+            height: 32em;
+            margin: 1em auto;
+            padding: 3em;
+            width: 90%;
+        }
+
+        #results article canvas {
+            background: #F4ECD6;
+            border: .05em solid #310A31;
+            margin: 0 auto;
         }
 
     /* Footer */
