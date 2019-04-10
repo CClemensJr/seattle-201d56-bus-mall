@@ -24,8 +24,8 @@
   let thirdProduct = document.getElementById("thirdProduct");
   let thirdProductTitle = document.getElementById("thirdProductTitle");
 
-  let ul = document.getElementById("resultsList");
-
+  let pChart = document.getElementById("productChart");
+  pChart.hidden = true;
 
 /******************* 
  * Product constructor 
@@ -117,6 +117,7 @@
  * This function shows the results 
  * */
   function showResults() {
+    pChart.hidden = false;
     let timesClicked = [];
     let ctx = document.getElementById("productChart").getContext("2d");
 
