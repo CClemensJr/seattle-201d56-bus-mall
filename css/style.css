@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Germania+One|Mrs+Sheppards|Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
 
 
 /* deep purple: #310A31
@@ -107,7 +108,7 @@ body {
     }
 
     #products h1, #results h1 {
-        font-family: 'Germania One', cursive;
+        font-family: 'Righteous', cursive;
         font-size: 30px;
         font-size: 3vw;
         padding-bottom: .5em;
