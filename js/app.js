@@ -24,8 +24,8 @@
   let thirdProduct = document.getElementById("thirdProduct");
   let thirdProductTitle = document.getElementById("thirdProductTitle");
 
-  let ul = document.getElementById("resultsList");
-
+  let pChart = document.getElementById("productChart");
+  pChart.hidden = true;
 
 /******************* 
  * Product constructor 
@@ -43,6 +43,13 @@
 /******************** 
  * Create Product objects 
  * */
+  function createProducts() {
+    let localProducts = localStorage.getItem("products");
+    let products = JSON.parse(localProducts);
+
+    (products && products.length) ? allProducts = products : instantiateProducts();
+  }
+
   function instantiateProducts() {
     for (let i = 0; i < productNames.length; i++)
     {
@@ -56,15 +63,14 @@
  * */
   function showRandomProducts() {
     let currentProductIndexes = [];
-    // let previousProductIndexes = [0, 0, 0];
 
     for (let i = 0; i < 3; i++) {
       let randomNumber = Math.floor(Math.random() * allProducts.length);
 
-      if (!currentProductIndexes.includes(randomNumber) /* && !previousProductIndexes.includes(randomNumber) */) {
+      if (!currentProductIndexes.includes(randomNumber)) {
         currentProductIndexes.push(randomNumber);
       } else {
-        while(currentProductIndexes.includes(randomNumber) /* && previousProductIndexes.includes(randomNumber) */) {
+        while(currentProductIndexes.includes(randomNumber)) {
           randomNumber = Math.floor(Math.random() * allProducts.length);
         }
 
@@ -95,41 +101,6 @@
         thirdProductTitle.innerText = allProducts[currentProductIndexes[i]].name;
       }
     }
-
-    // previousProductIndexes = currentProductIndexes;
-    
-    // console.log(`PREVIOUS: ${ previousProductIndexes[0] }, ${ previousProductIndexes[1] }, ${ previousProductIndexes[2] }`);
-
-    
-
-    // let firstRandomIndex = Math.floor(Math.random() * allProducts.length);
-    // let secondRandomIndex = Math.floor(Math.random() * allProducts.length);
-    // let thirdRandomIndex = Math.floor(Math.random() * allProducts.length);
-
-    // while (firstProduct.alt === allProducts[firstRandomIndex].name || 
-    //        secondProduct.alt === allProducts[secondRandomIndex].name ||
-    //        thirdProduct.alt === allProducts[thirdRandomIndex].name) {
-
-    //   let firstRandomIndex = Math.floor(Math.random() * allProducts.length);
-
-    //   console.log("Duplicate found");
-    // }
-
-    // allProducts[firstRandomIndex].views++;
-    // allProducts[secondRandomIndex].views++;
-    // allProducts[thirdRandomIndex].views++;
-
-    // firstProduct.src = allProducts[firstRandomIndex].filepath;
-    // firstProduct.alt = allProducts[firstRandomIndex].name;
-    // firstProductTitle.innerText = allProducts[firstRandomIndex].name;
-
-    // secondProduct.src = allProducts[secondRandomIndex].filepath;
-    // secondProduct.alt = allProducts[secondRandomIndex].name;
-    // secondProductTitle.innerText = allProducts[secondRandomIndex].name;
-
-    // thirdProduct.src = allProducts[thirdRandomIndex].filepath;
-    // thirdProduct.alt = allProducts[thirdRandomIndex].name;
-    // thirdProductTitle.innerText = allProducts[thirdRandomIndex].name;
   }
 
   
@@ -139,19 +110,13 @@
   let randomizer = () => Math.floor(Math.random() * allProducts.length);
 
 
-/******************** 
- * This function calls all of the others 
- * */
-  function main() {
-    instantiateProducts();
-    showRandomProducts();
-  }
-
 
 /********************* 
  * This function shows the results 
  * */
   function showResults() {
+    pChart.hidden = false;
+
     let timesClicked = [];
     let ctx = document.getElementById("productChart").getContext("2d");
 
@@ -168,8 +133,8 @@
         datasets: [{
           label: "# of Clicks",
           data: timesClicked,
-          backgroundColor: "Black",
-          borderColor: "Blue",
+          backgroundColor: "#a7cab1",
+          borderColor: "#310A31",
           borderWidth: 1
         }]
        },
@@ -184,15 +149,16 @@
         }
       }
     });
-
-    for (let i = 0; i < allProducts.length; i++) {
-      let li = document.createElement("li");
-      let resultText = document.createTextNode(`${ allProducts[i].name }: ${ allProducts[i].clicks } clicks`);
-
-      li.appendChild(resultText);
-      ul.appendChild(li);
-    }
   }
+
+
+/******************** 
+ * This function calls all of the others 
+ * */
+function main() {
+  createProducts();
+  showRandomProducts();
+}
 
 
 /***********************
@@ -209,10 +175,11 @@
 
     totalClicks++;
     
-    if (totalClicks === maxClicks)
+    if (totalClicks > maxClicks)
     {
       productImages.removeEventListener('click', handleProductClick);
-      
+      localStorage.setItem('products', JSON.stringify(allProducts));
+      document.location.href="#results";
       showResults();
     }
     else

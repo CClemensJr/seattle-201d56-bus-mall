@@ -19,6 +19,7 @@ body {
     width: 80%;
 }
 
+
 /* Nav Styling */
     #header {
         background: #88B7B5;
@@ -56,9 +57,17 @@ body {
         text-decoration: none;
     }
 
+    #header nav h1 a:hover {
+        color: #310A31;
+        -webkit-text-stroke-color: #F4ECD6;
+        -webkit-text-stroke-width: 0.05em;
+    }
+
     #header nav ul {
         background: #88B7B5;
         float: right;
+        height: 3em;
+        line-height: 3em;
     }
 
     #header nav ul li {
@@ -66,7 +75,6 @@ body {
         display: inline-block;
         /* font-size: 1.25em; */
         margin-left: 3em;
-        text-transform: lowercase;
     }
 
     #header nav ul li a {
@@ -80,15 +88,19 @@ body {
         text-decoration: none;
     }
 
-    #header nav ul li:hover {
-        background-color: black;
-        border-bottom: 2px solid #D05353;
+    #header nav ul li a:hover {
+        border-bottom: .5em solid #847996;
+        color: #A7CAB1;
+        font-family: 'Mrs Sheppards', cursive;
+        padding: .1em;
+        -webkit-text-stroke-color: #310A31;
+        -webkit-text-stroke-width: 0.05em;
     }
+
 
 /* Main Content Styling */
     #home, #products, #results {
-        /* background-color: #191919; */
-        border-bottom: 1em solid black;
+        border-bottom: .05em solid #310A31;
         font-family: 'Open Sans Condensed', sans-serif;
         height: 50em;
         width: 100%;
@@ -98,9 +110,9 @@ body {
         font-family: 'Germania One', cursive;
         font-size: 30px;
         font-size: 3vw;
-        padding-top: 3em;
+        padding-bottom: .5em;
+        padding-top: 2em;
         text-align: center;
-        text-transform: lowercase;
         width: 100%;
     }
 
@@ -109,62 +121,64 @@ body {
         #home {
             background-image: url("./../img/busseat.jpg");
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
+            border: .05em solid #310A31;
         }
 
         #home h1 {
+            background: transparent;
+            display: inline;
             font-size: 60px;
             font-size: 6vw;
-            left: 2em;
+            left: 2.5em;
             position: absolute;
-            text-transform: lowercase;
             top: 2em;
-            -webkit-text-stroke-color: black;
+            -webkit-text-stroke-color: #F4ECD6;
             -webkit-text-stroke-width: 0.01em;
         }
 
         #home h2 {
+            background: transparent;
             font-size: 30px;
-            font-size: 3vw;
-            left: 8em;
+            font-size: 4vw;
+            left: 7em;
             position: absolute;
-            text-transform: lowercase;
             top: 10em;
-            -webkit-text-stroke-color: black;
+            -webkit-text-stroke-color: #F4ECD6;
             -webkit-text-stroke-width: 0.02em;
         }
 
-
         #home a {
-            background-color: #D05353;
-            border: .1em solid #E58F65;
+            background-color: #88B7B5;
+            border: .1em solid #847996;
             border-radius: 2px;
             font-size: 2vw;
-            left: 20em;
+            left: 22em;
             padding: .25em;
             position: absolute;
             text-decoration: none;
-            text-transform: lowercase;
-            top: 22em;
+            top: 24em;
         }
 
         #home a:hover {
-            background-color: #191919;
-            border-color: #D05353;
-            /* color: #E58F65; */
+            background-color: #310A31;
+            border-color: #F4ECD6;
+            color: #88B7B5;
         }
 
 
     /* products Section */
         #products article {
-            background-color: #E58F65;
-            height: 35em;
+            background-color: #847996;
+            border: .5em solid #A7CAB1;
+            height: 24em;
             margin: 1em auto;
             padding: 3em;
             width: 90%;
         }
 
         #products article figure {
+            border: .5em solid #F4ECD6;
             display: inline-block;
             margin: 0 auto;
             width: 30%;
@@ -183,11 +197,13 @@ body {
         }
 
         #products article figure img {
+            border: .05em solid #310A31;
             width: 100%;
         }
 
         #products article figure figcaption {
-            background: lightblue;
+            background: #88B7B5;
+            border: .05em solid #310A31;
             height: 2em;
             line-height: 2em;
             text-align: center;
@@ -196,11 +212,18 @@ body {
         
     /* results Section */
         #results article {
-            background-color: #E58F65;
-            height: 35em;
-            margin-left: 25%;
-            margin-right: 25%;
-            width: 50%;
+            background-color: #847996;
+            border: .5em solid #A7CAB1;
+            height: 32em;
+            margin: 1em auto;
+            padding: 3em;
+            width: 90%;
+        }
+
+        #results article canvas {
+            background: #F4ECD6;
+            border: .05em solid #310A31;
+            margin: 0 auto;
         }
 
     /* Footer */
