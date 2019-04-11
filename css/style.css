@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Germania+One|Mrs+Sheppards|Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
 
 
 /* deep purple: #310A31
@@ -12,6 +13,10 @@ eggshell: #F4ECD6 */
     background: #F4ECD6;
     box-sizing: border-box;
     color: #310A31;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -107,7 +112,7 @@ body {
     }
 
     #products h1, #results h1 {
-        font-family: 'Germania One', cursive;
+        font-family: 'Righteous', cursive;
         font-size: 30px;
         font-size: 3vw;
         padding-bottom: .5em;
@@ -209,6 +214,28 @@ body {
             text-align: center;
         }
 
+        #products a {
+            background-color: #88B7B5;
+            border: .1em solid #847996;
+            border-radius: 2px;
+            /* display: inline-block; */
+            font-size: 2vw;
+            margin-left: auto;
+            margin-right: auto;
+            /* left: 22em; */
+            padding: .25em;
+            /* position: absolute; */
+            text-align: center;
+            text-decoration: none;
+            /* top: 24em; */
+            width: 20%;
+        }
+
+        #products a:hover {
+            background-color: #310A31;
+            border-color: #88B7B5;
+            color: #F4ECD6;
+        }
         
     /* results Section */
         #results article {
