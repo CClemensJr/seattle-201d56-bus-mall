@@ -27,6 +27,9 @@
   let pChart = document.getElementById("productChart");
   pChart.hidden = true;
 
+  let resultsButton = document.getElementById("resultsButton");
+  resultsButton.hidden = true;
+
 /******************* 
  * Product constructor 
  * */
@@ -179,7 +182,8 @@ function main() {
     {
       productImages.removeEventListener('click', handleProductClick);
       localStorage.setItem('products', JSON.stringify(allProducts));
-      document.location.href="#results";
+      // document.location.href="#results";
+      resultsButton.hidden = false;
       showResults();
     }
     else

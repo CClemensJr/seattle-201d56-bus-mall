@@ -15,6 +15,10 @@ eggshell: #F4ECD6 */
     color: #310A31;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0 auto;
     width: 80%;
@@ -210,6 +214,28 @@ body {
             text-align: center;
         }
 
+        #products a {
+            background-color: #88B7B5;
+            border: .1em solid #847996;
+            border-radius: 2px;
+            /* display: inline-block; */
+            font-size: 2vw;
+            margin-left: auto;
+            margin-right: auto;
+            /* left: 22em; */
+            padding: .25em;
+            /* position: absolute; */
+            text-align: center;
+            text-decoration: none;
+            /* top: 24em; */
+            width: 20%;
+        }
+
+        #products a:hover {
+            background-color: #310A31;
+            border-color: #88B7B5;
+            color: #F4ECD6;
+        }
         
     /* results Section */
         #results article {
